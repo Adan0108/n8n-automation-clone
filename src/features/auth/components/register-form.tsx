@@ -37,6 +37,13 @@ const registerSchema = z.object({
 })
 type RegisterFormValue = z.infer<typeof registerSchema>;
 
+/**
+ * Renders a registration form with email, password, and confirm-password fields, validates input, and submits credentials to the authentication client.
+ *
+ * The component navigates to the home page on successful sign-up and displays an error toast on failure.
+ *
+ * @returns The registration form React element.
+ */
 export function RegisterForm() {
   const router = useRouter();
 
