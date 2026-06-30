@@ -88,8 +88,10 @@ model Workflow{
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-enum NodeType{
+enum NodeType {
   INITIAL
+  MANUAL_TRIGGER
+  HTTP_REQUEST
 }
 
 model Node{
